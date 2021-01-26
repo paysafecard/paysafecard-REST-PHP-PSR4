@@ -1,0 +1,21 @@
+{
+  "name": "paysafecard/paysafecard-rest-php-psr4",
+  "description": "paysafecard PHP PSR4 SDK for payments, refunds and payouts",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wouter van Os",
+      "email": "wvanos@0100dev.nl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "paysafecard\\paysafecardSDK\\": "src/"
+    }
+  },
+  "require": {
+    "ext-curl": "*",
+    "ext-json": "*"
+  }
+}
