@@ -153,7 +153,7 @@ function getURL()
 
 // Print errors
 
-function printError(PaysafecardPaymentController $pscClass, $debugLevel, $id)
+function printError(\paysafecard\paysafecardSDK\Payments $pscClass, $debugLevel, $id)
 {
     $error = $pscClass->getError();
     if ($debugLevel == 0) {
@@ -198,7 +198,7 @@ function printError(PaysafecardPaymentController $pscClass, $debugLevel, $id)
     }
 }
 
-function printSuccess($response, PaysafecardPaymentController $pscClass, $debugLevel)
+function printSuccess($response, \paysafecard\paysafecardSDK\Payments $pscClass, $debugLevel)
 {
     if ($debugLevel == 0) {
         echo '

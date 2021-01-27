@@ -29,6 +29,8 @@ class Logger
     public function log($request, $http, $response)
     {
         file_put_contents($this->filename, strftime("Requested at: %A, %d. %B %Y %H:%M:%S\n"), FILE_APPEND | LOCK_EX);
+        file_put_contents($this->filename, "Incoming URL: " . $_SERVER["REQUEST_URI"], FILE_APPEND | LOCK_EX);
+        file_put_contents($this->filename, "\n", FILE_APPEND | LOCK_EX);
         file_put_contents($this->filename, "\nRequest: ", FILE_APPEND | LOCK_EX);
         file_put_contents($this->filename, print_r($request, true), FILE_APPEND | LOCK_EX);
         file_put_contents($this->filename, "\nHTTP: ", FILE_APPEND | LOCK_EX);

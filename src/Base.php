@@ -100,8 +100,12 @@ abstract class Base
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($curlparam));
             curl_setopt($ch, CURLOPT_POST, true);
         } elseif ($method == 'GET') {
-            curl_setopt($ch, CURLOPT_URL, $this->url . $curlparam);
-            curl_setopt($ch, CURLOPT_POST, false);
+            if (!empty($curlparam)) {
+                curl_setopt($ch, CURLOPT_URL, $this->url . $curlparam);
+                curl_setopt($ch, CURLOPT_POST, false);
+            } else {
+                curl_setopt($ch, CURLOPT_URL, $this->url);
+            }
         }
         curl_setopt($ch, CURLOPT_PORT, 443);
         curl_setopt($ch, CURLOPT_TIMEOUT, 60);

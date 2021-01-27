@@ -19,7 +19,7 @@ return [
      * Set key, your psc key
      */
 
-    'psc_key'     => "//EMPTY",
+    'psc_key'     => "psc_oYYWQiU5MF62yiH2sH3OFm9D4oGy1h-",
 
     /*
      * Logging:
